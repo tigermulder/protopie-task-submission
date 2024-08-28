@@ -1,0 +1,5 @@
+[
+  { "name": "coca-cola", "price": 1100, "stock": 10 },
+  { "name": "water", "price": 600, "stock": 8 },
+  { "name": "coffee", "price": 700, "stock": 0 }
+]

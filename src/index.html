@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProtoPie-과제</title>
+</head>
+<body>
+  <div id="vending-machine">
+    <h1>자판기</h1>
+  
+    <!-- 도식화 PDF 보기 -->
+    <div id="pdf-container">
+      <a href="/protopie-task-submission/docs/schematic.pdf" target="_blank">도식화 PDF 보기</a>
+    </div>
+
+    <!-- 음료 목록 및 재고 표시 -->
+    <div id="drinks-list">
+      <!-- 음료 목록 -->
+    </div>
+  
+    <h2>결제 수단을 선택하여주세요.</h2>
+    <!-- 결제 방법 선택 -->
+    <div id="payment">
+      <input type="radio" id="cash" name="payment" value="cash" checked>
+      <label for="cash" class="payment-option">현금</label>
+      
+      <input type="radio" id="card" name="payment" value="card">
+      <label for="card" class="payment-option">카드</label>
+    </div>
+
+    <!-- 카드 잔액 입력 -->
+    <div id="card-input-section" style="display: none;">
+      <input type="number" id="card-balance-input" placeholder="카드 잔액을 입력하세요">
+    </div>
+  
+    <!-- 금액 입력 (현금 선택 시에만 표시) -->
+    <div id="cash-input-section">
+      <label>&#36; 현금을 넣어주세요</label>
+      <div id="cash-buttons">
+        <button type="button" class="cash-btn" data-value="100">100원</button>
+        <button type="button" class="cash-btn" data-value="500">500원</button>
+        <button type="button" class="cash-btn" data-value="1000">1000원</button>
+        <button type="button" class="cash-btn" data-value="5000">5000원</button>
+        <button type="button" class="cash-btn" data-value="10000">10000원</button>
+      </div>
+      <div id="cash-display">투입된현금: 0원</div>
+    </div>
+  
+    <!-- 장바구니 -->
+    <div id="cart-list">
+      <div id="cart-items">
+        <p>장바구니가 비어 있습니다.</p>
+      </div>
+      <div id="total-price-container">
+        <div id="total-price">total: 0원</div>
+      </div>
+    </div>  
+   
+    <!-- 구매 버튼 -->
+    <button id="buy-button" disabled>구매</button>
+
+    <!-- 결제상태 초기화 버튼 -->
+    <button id="reset-button">처음으로 돌아가기 ( reset )</button>
+  </div>
+  
+  <script src="bundle.js"></script>
+</body>
+</html>
